@@ -45,6 +45,32 @@ p {
     margin-bottom: 2rem;
 }
 
+.screen1 img{
+    cursor: pointer;
+}
+
+.screen1 img:hover{
+    cursor: pointer;
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake{
+    10%, 90%{
+        transform: translate3d(-1px, 1px, 0)
+    }
+    20%, 80%{
+        transform: translate3d(0px, 4px, 1px)
+    }
+    30%, 50%, 70%{
+        transform: translate3d(1px, 2px, 0px);
+    }
+    40%, 60%{
+        transform: translate3d(-1px, -2px, 1px)
+    }
+}
+
 .cursive-text{
     font-family: "Dancing Script", cursive;
     font-size: 2.4rem;
@@ -53,6 +79,18 @@ p {
     background-color: #E4EDF1;
     padding: 1rem;
     box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+    animation-name: showphrase;
+    animation-duration: 2s;
+}
+
+@keyframes showphrase {
+    0%{
+        transform: translateY(20rem) scale(0);
+    }
+    100%{
+        transform: translateY(0rem) scale(1);
+    }
 }
 
 button{
@@ -66,4 +104,11 @@ button{
     font-family: "DM Sans", sans-serif;
     font-weight: bold;
     font-size: 15px;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: #db8308;
 }
